@@ -17,6 +17,10 @@ const Home = () => {
     if (e.key === "Enter") document.getElementById('searchButton').click();
   }
 
+  const clearSearchFieldValue = () => {
+    setMovie("");
+  }
+
   return <Box>
     <Box id="searchBox">
       <TextField
@@ -35,7 +39,7 @@ const Home = () => {
         Search
       </Button>
     </Box>
-    <MovieList loading={loading} data={data} />
+    <MovieList clearSearchFieldValue={clearSearchFieldValue} loading={loading} data={data} />
   </Box>
 }
 

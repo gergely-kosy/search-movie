@@ -5,7 +5,7 @@ import { Box, CircularProgress } from '@mui/material';
 import MovieRow from "../MovieRow";
 import "./MovieList.css";
 
-const MovieList = ({ data, loading }) => {
+const MovieList = ({ clearSearchFieldValue, data, loading }) => {
 
   const [movieList, setMovieList] = useState([]);
 
@@ -14,6 +14,7 @@ const MovieList = ({ data, loading }) => {
   }, [data]);
 
   const triggerSearch = (movieList) => {
+    clearSearchFieldValue();
     setMovieList(movieList);
   }
 
