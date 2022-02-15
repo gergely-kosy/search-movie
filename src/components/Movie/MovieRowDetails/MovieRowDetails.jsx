@@ -4,7 +4,6 @@ import "./MovieRowDetails.css";
 const MovieRowDetails = ({ similarMovies, loading, plotShort, wikiURL, imdbURL, triggerSearch }) => {
   return (
     <Box className="movieDetailsBox">
-      {console.log(similarMovies)}
       {loading ? <CircularProgress /> : 
         <Box className="movieDetails">
           <Box sx={{ color: 'text.secondary' }} className="detailsLeftSide">{plotShort}</Box>
